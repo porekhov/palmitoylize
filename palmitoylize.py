@@ -3,7 +3,7 @@ import sys, os, optparse, re
 parser = optparse.OptionParser()
 parser.add_option('-p','--pdb', dest='pdb', help = 'PDB file')
 parser.add_option('-i','--itp', dest='itp', help = 'itp file')
-parser.add_option('-d','--dir', dest='direct', help = 'direction of palmitoyl tail with respect to Z normal: 1 or -1')
+parser.add_option('-d','--dir', dest='direct', help = 'direction of palmitoyl tail with respect to the membrane normal: 1 or -1')
 parser.add_option('-c','--cys', dest='cys', help = 'list of cys res indices to modify')
 
 (options,args) = parser.parse_args()
