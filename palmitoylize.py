@@ -125,7 +125,10 @@ for line in open(itp_file, 'r').readlines():
         elif line.replace(" ", "").startswith('[position_restraints]'):
             cur_section = 'pc'
             continue
-        # handling atoms
+        elif line.replace(" ", "").startswith('[virtual_sites2]'):
+            cur_section = 'vs2'
+            continue
+            # handling atoms
         if cur_section == 'at' and fields[3] == 'CYS' and fields[4] == 'SC1' and fields[2] in cys2cyp:
             cysteines.append(Atom(fields[0], fields[1], fields[2], 'CYP', \
                                                 fields[4], fields[5], fields[6]))
